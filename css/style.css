@@ -1,0 +1,262 @@
+/* ---------------
+Main Style
+--------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Dosis', sans-serif;
+    line-height: 1.6;
+    color: #666;
+    background: #F6F6F6;
+  }
+  
+  .header img {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+  }
+  
+  
+  /* -------------------
+  GRID CSS 
+  -------------------- */
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header header header" "nav content aside" "footer footer footer";
+  }
+  
+  .header { grid-area: header; }
+  
+  .nav { grid-area: nav; }
+  
+  .content { grid-area: content; }
+  
+  .aside { grid-area: aside; }
+  
+  .footer { grid-area: footer; }
+  
+  
+  /* -------------------------
+  RESPONSIVE CSS
+  -------------------------- */
+  
+  @media screen and (max-width: 900px) {
+    .grid-container {
+      grid-template-areas:
+        "header"
+        "nav"
+        "content"
+        "aside"
+        "footer";
+  
+      grid-template-columns: 1fr;
+      grid-template-rows:
+        auto /* Header */
+        auto /* Nav */
+        1fr /* Content */
+        auto /* Aside */
+        auto; /* Footer */
+    }
+  
+    nav, aside {
+      margin: 0;
+    }
+  }
+  
+  
+  
+  /* ---------------
+  Other page styles
+  --------------- */
+  
+  nav .nav-container, aside .aside-container{
+    position: sticky;
+    top: 20px;
+    padding: 2em;
+  }
+  
+  nav h2, aside h2 {
+    border-bottom: 2px solid #666;
+  }
+  
+  nav ul {
+    list-style: none;
+      margin-left: 0.5rem;
+  }
+  
+  aside ul {
+    margin-left: 1em;
+  }
+  
+  nav ul li, aside ul li {
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  nav ul li a {
+    line-height: 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.4em;
+    display: block;
+    transition: all ease-out 300ms;
+  }
+  
+  nav ul li.active a{
+    color: #444;
+    font-weight: 900;
+  }
+  
+  nav ul li:not(.active) a{
+    color: #666;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li:not(.active):hover a {
+    color: #444;
+  }
+  
+  nav ul li:not(.active):after {
+    opacity: 0.2;
+  }
+  
+  nav ul li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: black;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, #5e42a6, #b74e91);
+    transition: all 0.3s ease;
+  }
+  nav ul li:not(.active):hover:after {
+      opacity: 0.5;
+  }
+  
+  button {
+    width: 80%;
+    display: block;
+    margin: 1em auto;
+    height: 60px;
+    background-color: transparent;
+    border: 2px solid #666;
+    border-radius: 12px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
+  
+  button:hover {
+      transform: translateY(-2px);
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, .15);
+  }
+  
+  button:active, button:focus {
+      outline: 0;
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    position: relative;
+    margin: 1rem;
+    padding-bottom: calc(2em + 60px);
+    background: white;
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s linear;
+  }
+  
+  .card:hover {
+    box-shadow: 2px 8px 45px rgba(0, 0, 0, .25);
+  }
+  
+  .card h1 {
+    text-align: center;
+    padding: 1.5rem 2.5rem;
+    background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
+    margin: 0 0 2rem 0;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  .card p {
+    padding: 0 2em;
+    margin: 0;
+  }
+  
+  .card button {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    display: block;
+    margin: 1em 0;
+    height: 60px;
+    background-color: transparent;
+    border: 2px solid #666;
+    border-radius: 12px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
+  
+  .card button:hover {
+    background-color: #fef9d7;
+      transform: translateY(-2px);
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, .15);
+  }
+  
+  .card button:active, .card button:focus {
+      outline: 0;
+  }
+  
+  
+  footer p {
+    padding-top: 40px;
+    text-align: center;
+  }
+  
+  
+  @media screen and (min-width: 1200px) {
+    .card {
+      flex: 1 1 calc(50% - 2rem);
+    }
+  }
+  
+  @media screen and (min-width: 1400px) {
+    .card {
+      flex: 1 1 calc(33% - 2rem);
+    }
+  }
+  
+  .card:nth-child(n) h1 {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  }
+  
+  .card:nth-child(2n) h1 {
+    background-image: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
+  }
+  
+  .card:nth-child(3n) h1 {
+    background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
+  }
+  

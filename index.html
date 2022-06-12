@@ -1,49 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>StudBud</title>
+
+  <!-- Meta tags -->
+  <title>StudBud_DECO 2017 A3 Tiana Tian mtia3747</title>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <meta name="description" content="StudBud is an online study tool that aims to help design students better manage their team/individual projects and tasks. 
+  It also provides a mini documentation library to store frequented learning materials. 
+  StudBud wish to use Promodoro Timer and Stopwatch to improve student concentration and encourage them to take proper rest in between study sessions with the embedded music player " />
+  <meta name="keywords" content="study tool, task management, content management, timer, promodoro timer, stopwatch" />
+	<meta name="author" content="Tiana Tian" />
+  
+  <!-- Fonts-- -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+
+  <!-- Theme style  -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  <!-- Favicon  -->
   <link rel="icon" href="img/favicon.png">
 </head>
+
+
 <body>
-  <h1>StudBud</h1>
-  <form id="taskform">
-    <label for="task">Task:</label>
-    <input type="text" name="task" id="taskInput">
+  <div id="root" class="grid-container">
+    <!-- Header -->
+    <header class="header">
+      <img src="img/logo.png" alt="StudBud logo" />
+    </header>
 
-    <br>
-  <!-- Date input -->
-    <label for="dueDate">Due Date: </label>
-    <input type="date" name="dueDate" id="dueDateInput">
-    <br>
-  <!-- Time input -->
-  <label for="completionTime">Completion Time: </label>
-    <input type="time" name="completionTime" id="completionTimeInput">
+    <!-- Navigation -->
+    <nav class="nav">
+      <!-- Internal nav container for sticky positioning -->
+      <div class="nav-container">
+        <h2>studBUD</h2>
+        <ul>
+          <!-- Nav items for current and potential future pages -->
+          <li class="active"><a href="index.html">Tasks</a></li>
+          <li><a href="library.html">Library</a></li>
+          <li><a href="promodoro.html">Promodoro Timer</a></li>
+          <li><a href="stopwatch.html">Stopwatch</a></li>
+          <li><a href="music.html">Music</a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <br>
+    <!-- Main content -->
+    <main class="content">
+      <!-- This should remain empty - our content will be dynamically loaded with JS -->
 
-  <label for="estimatedTime">Estimated completion time (in mins):</label>
-  <input type="number" name="estimatedTime" id="estimatedTimeInput">
-  <!-- Priority -->
-  <br>
+      <ul id="tasklist">
+      </ul>
+    </main>
 
-  <label for="priority">Task Priority:</label>
-  <select name="prority" id="priorityInput">
-    <option value="">Select one</option>
-    <option value="Low">Low</option>
-    <option value="Medium">Medium</option>
-    <option value="High">High</option>
-  </select>
+    <!-- Aside -->
+    <aside class="aside">
+      <!-- Internal aside container for sticky positioning -->
+      <div class="aside-container">
+        <form id="taskform">
+          <label for="task">Task:</label>
+          <input type="text" name="task" id="taskInput" required>
 
-  <br>
+          <!-- Date input -->
+          <label for="dueDate">Due Date: </label>
+          <input type="date" name="dueDate" id="dueDateInput">
 
-    <button type="submit">Submit</button>
-  </form>
-  <ul id="tasklist">
-  </ul>
+          <!-- Time input -->
+          <label for="completionTime">Completion Time: </label>
+          <input type="time" name="completionTime" id="completionTimeInput">
+
+          <label for="estimatedTime">Estimated completion time (in mins):</label>
+          <input type="number" name="estimatedTime" id="estimatedTimeInput">
+          <!-- Priority -->
+
+
+          <label for="priority">Task Priority:</label>
+          <select name="prority" id="priorityInput">
+              <option value="">Select one</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+          </select>
+
+          <br>
+
+          <button type="submit">Add Task</button>
+       </form>
+      </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Made by Tiana Tian</a>.</p>
+    </footer>
+  </div>
+
+
+
+  
+  
   <script src="script.js"></script>
 </body>
+
 </html>
