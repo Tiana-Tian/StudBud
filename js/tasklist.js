@@ -50,24 +50,23 @@ function addTask(taskDescription, dueDate, estimatedTime, priorityRating, comple
 function renderTask(task){
   // Create HTML elements
   let item = document.createElement("li");
-  item.innerHTML = "<p>" + task.taskDescription + "</p>";
-
+  item.innerHTML = "<p>" + task.taskDescription +"<br>"+task.dueDate + "</p>" ; 
   tasklist.appendChild(item);
 
-  // Extra Task DOM elements
+  // Extra Task DOM elements - delete button
   let delButton = document.createElement("button");
   let delButtonText = document.createTextNode("Delete Task");
   delButton.appendChild(delButtonText);
   item.appendChild(delButton);
 
 
-  // Event Listeners for DOM elements
+  // Event Listeners for DOM elements - delete button
   delButton.addEventListener("click", function(event){
     event.preventDefault();
     item.remove();
   })
 
 
-  // Clear the input form
+  // Clear the task input form
   form.reset();
 }

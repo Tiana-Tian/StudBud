@@ -139,7 +139,7 @@ Main Style
     background: black;
     left: 0;
     bottom: 0;
-    background-image: linear-gradient(to right, #5e42a6, #b74e91);
+    background-image: linear-gradient(to right, #069CB9, #DDABA7);
     transition: all 0.3s ease;
   }
   nav ul li:not(.active):hover:after {
@@ -212,8 +212,8 @@ Main Style
     margin-left: 0px;
   }
   .column:hover {
-    border: 1px solid #4786FF;
-    box-shadow: 0px 1px 6px #4786FF;
+    border: 1px solid #7FBDD3;
+    box-shadow: 0px 1px 6px #7FBDD3;
   }
   .column-title {
     margin: 24px 0px 0px 24px;
@@ -246,9 +246,9 @@ Main Style
   }
   .task:hover {
     background: #FFFFFF;
-    border: 1px solid #4786FF;
+    border: 1px solid #7FBDD3;
     box-sizing: border-box;
-    box-shadow: 0px 1px 4px #4786FF;
+    box-shadow: 0px 1px 4px #7FBDD3;
     border-radius: 2px;
   }
   .task .trash {
@@ -262,7 +262,7 @@ Main Style
     color: #c42d1c;
   }
   .hold:active:hover {
-    border: solid 3px blue;
+    border: solid 3px #7FBDD3;
   }
   .hovered {
     border-style: dashed;
