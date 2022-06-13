@@ -1,13 +1,18 @@
+// Basic form DOM elements
 const form = document.getElementById("taskform");
 const button = document.querySelector("#taskform > button")
-var taskInput = document.getElementById("taskInput");
+
+// Selector for the tasklist output
 var tasklist = document.getElementById("tasklist");
 
+// DOM elements for the task input fields
+var taskInput = document.getElementById("taskInput");
 var dueDateInput = document.getElementById("dueDateInput");
 var completionTimeInput = document.getElementById("completionTimeInput");
 var estimatedTimeInput = document.getElementById("estimatedTimeInput");
 var priorityInput = document.getElementById("priorityInput");
 
+// Form submission event listener
 form.addEventListener("submit", function(event){
   event.preventDefault();
   let task = taskInput.value;
@@ -19,8 +24,10 @@ form.addEventListener("submit", function(event){
   console.log(taskListArray);
 })
 
+// Create global array to track tasks
 var taskListArray = [];
 
+// Function to add task with user inputs as parameters
 function addTask(taskDescription, dueDate, estimatedTime, priorityRating, completionTime, completionStatus) {
   let d = new Date();
   let dateCreated = d.getFullYear();
@@ -38,6 +45,8 @@ function addTask(taskDescription, dueDate, estimatedTime, priorityRating, comple
   renderTask(task);
 }
 
+
+// Function to display task on screen
 function renderTask(task){
   // Create HTML elements
   let item = document.createElement("li");
