@@ -51,10 +51,30 @@
 
     <!-- Main content -->
     <main class="content">
-      <!-- content will be dynamically loaded with JS -->
+      <!-- Create kanban board columns for task lists -->
+      <section id="columns">
+        <div class="column dropzone">
+            <h3 class="column-title">Backlog</h3>
+            <!-- content will be dynamically loaded with JS -->
 
-      <ul id="tasklist">
-      </ul>
+            <ul class="tasks" id="tasklist">
+            </ul>
+
+           <!-- lambda code 
+            <ul class="tasks" id="tasks-added">
+  
+            </ul> -->
+        </div>
+        <div class="column dropzone">
+            <h3 class="column-title">To Do</h3>
+        </div>
+        <div class="column dropzone">
+            <h3 class="column-title">In Progress</h3>
+        </div>
+        <div class="column dropzone">
+            <h3 class="column-title">Complete</h3>
+        </div>
+    </section>
     </main>
 
     <!-- Aside -->
