@@ -1,0 +1,26 @@
+{
+  "name": "studbud",
+  "version": "1.0.0",
+  "description": "Web application for studying",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tiana-Tian/StudBud.git"
+  },
+  "keywords": [
+    "studbud",
+    "web",
+    "application",
+    "for",
+    "studying"
+  ],
+  "author": "Tiana Tian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tiana-Tian/StudBud/issues"
+  },
+  "homepage": "https://github.com/Tiana-Tian/StudBud#readme"
+}

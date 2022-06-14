@@ -31,6 +31,10 @@ Main Style
   /* -------------------------
   Add new task form style
   -------------------------- */
+ label {
+   font-size: 20px;
+   font-weight: 600;
+ }
   input,
   select,
   textarea {
@@ -47,11 +51,16 @@ Main Style
   box-sizing: border-box;
   width: 100%;
   padding: 0.2rem 0.75rem;
-}
+  }
 
-input[type="text"] {
+  input[type="text"] {
   min-height: 8rem;
-}
+  }
+
+  input::placeholder {
+  opacity: 1; /* Firefox */
+  color: hsl(193, 65%, 42%);
+  }
 
   /* -------------------
   GRID CSS 
@@ -246,7 +255,7 @@ input[type="text"] {
     margin-left: 1rem;
   }
   .column:hover {
-    border: 1px solid #7FBDD3;
+    /*border: 1px solid #7FBDD3;*/
     box-shadow: 2px 8px 45px #7FBDD3;
   }
   .column-title {
