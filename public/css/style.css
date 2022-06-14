@@ -18,10 +18,13 @@ Main Style
     background: #F6F6F6;
   }
 
-  /*header {
-    background-image: linear-gradient(120deg, #DDABA7 0%, #97b3b8 100%);
-  }*/
+  body {
+    background-image: linear-gradient(120deg, #ffb4ae 0%, #2f9baf 100%);
+  }
 
+  header {
+    background-color: #F6F6F6;
+  }
   .header img {
     display: block;
     margin: 1rem auto;
@@ -38,7 +41,7 @@ Main Style
   input,
   select,
   textarea {
-    border: 2px solid rgb(137, 125, 125);
+    border: 2px solid rgb(237, 237, 237);
     background-color: white;
     border-radius: 0.25rem;
   }
@@ -120,7 +123,7 @@ Main Style
   nav .nav-container, aside .aside-container{
     position: sticky;
     top: 20px;
-    padding: 2em;
+    padding: 3em;
     
   }
   
@@ -190,7 +193,7 @@ Main Style
     margin: 1em auto;
     height: 60px;
     background-color: transparent;
-    border: 2px solid rgb(139, 116, 116);
+    border: 2px solid rgb(239, 239, 239);
     border-radius: 12px;
     color: #666;
     cursor: pointer;
@@ -199,7 +202,7 @@ Main Style
   
   button:hover {
       transform: translateY(-2px);
-      box-shadow: 2px 4px 10px #61a6b4;
+      box-shadow: 2px 4px 10px #58595a;
   }
   
   button:active, button:focus {
@@ -213,6 +216,7 @@ Main Style
   .content {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 3em;
     
   } /* movie demo code */
 
@@ -256,12 +260,12 @@ Main Style
   }
   .column:hover {
     /*border: 1px solid #7FBDD3;*/
-    box-shadow: 2px 8px 45px #7FBDD3;
+    box-shadow: 2px 8px 45px #454545;
   }
   .column-title {
     text-align: center;
     padding: 1.5rem 2.5rem;
-    background-image: linear-gradient(120deg, #DDABA7 50%, #069CB9 100%);
+    background-image: linear-gradient(120deg, #d1726b 0%, #069CB9 100%);
     margin: 0 0 2rem 0;
     font-size: 1.5rem;
     color: white;
@@ -403,26 +407,13 @@ Main Style
     }
   }
   
-  .taskContent:nth-child(n) h1 {
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-  }
-  
-  .taskContent:nth-child(2n) h1 {
-    background-image: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
-  }
-  
-  .taskContent:nth-child(3n) h1 {
-    background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
-  }
-  
- /* -------------------------
-  Demo movie card styles ends
-  -------------------------- */
+
 
 
 
   footer p {
-    padding-top: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
   }
   

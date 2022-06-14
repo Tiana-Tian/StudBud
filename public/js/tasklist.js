@@ -44,13 +44,14 @@ function addTask(subjectName, taskDescription, dueDate, completionTime, estimate
     completionStatus
   };
   taskListArray.push(task);
+  console.log(taskListArray);
   renderTask(task);
   // Clear the task input form
   form.reset();
 }
 
 
-// Function to display task on screen
+// Function to display and remove task on screen
 // Create HTML elements
 function renderTask(task){
   let item = document.createElement('li');
@@ -62,7 +63,7 @@ function renderTask(task){
 
     let taskContent = document.createElement('div');
     taskContent.classList.add('task-content');
-    taskContent.innerHTML = "<p>" +task.subjectName + "<br>"+task.taskDescription +"<br>"+task.dueDate +"<br>"+ task.priorityRating + "</p>" ;
+    taskContent.innerHTML = "<h4>" +task.subjectName +"</h4>" +  "<br>"+ "<p>"  +task.taskDescription + "<br>"+task.dueDate +"<br>"+ task.priorityRating + "</p>" ;
     
     let trash = document.createElement('div');
     trash.classList.add('trash');
@@ -83,7 +84,6 @@ function removeTask (event){
     let item = event.target.parentNode;
     tasks.removeChild(item);
 }
-
 
 // DRAG & DROP Function
 
