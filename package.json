@@ -2,7 +2,7 @@
   "name": "studbud",
   "version": "1.0.0",
   "description": "Web application for studying",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/Tiana-Tian/StudBud/issues"
   },
-  "homepage": "https://github.com/Tiana-Tian/StudBud#readme"
+  "homepage": "https://github.com/Tiana-Tian/StudBud#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
