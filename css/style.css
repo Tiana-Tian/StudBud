@@ -17,14 +17,42 @@ Main Style
     color: #666;
     background: #F6F6F6;
   }
-  
+
+  /*header {
+    background-image: linear-gradient(120deg, #DDABA7 0%, #97b3b8 100%);
+  }*/
+
   .header img {
     display: block;
     margin: 1rem auto;
     max-width: 100%;
   }
   
+  /* -------------------------
+  Add new task form style
+  -------------------------- */
+  input,
+  select,
+  textarea {
+    border: 2px solid rgb(137, 125, 125);
+    background-color: white;
+    border-radius: 0.25rem;
+  }
   
+  input,
+  select,
+  textarea {
+  font: 1rem / 1.25 sans-serif;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.2rem 0.75rem;
+}
+
+input[type="text"] {
+  min-height: 8rem;
+}
+
   /* -------------------
   GRID CSS 
   -------------------- */
@@ -56,16 +84,16 @@ Main Style
       grid-template-areas:
         "header"
         "nav"
-        "content"
         "aside"
+        "content"
         "footer";
   
       grid-template-columns: 1fr;
       grid-template-rows:
         auto /* Header */
         auto /* Nav */
-        1fr /* Content */
         auto /* Aside */
+        1fr /* Content */
         auto; /* Footer */
     }
   
@@ -84,6 +112,7 @@ Main Style
     position: sticky;
     top: 20px;
     padding: 2em;
+    
   }
   
   nav h2, aside h2 {
@@ -152,7 +181,7 @@ Main Style
     margin: 1em auto;
     height: 60px;
     background-color: transparent;
-    border: 2px solid #666;
+    border: 2px solid rgb(139, 116, 116);
     border-radius: 12px;
     color: #666;
     cursor: pointer;
@@ -161,7 +190,7 @@ Main Style
   
   button:hover {
       transform: translateY(-2px);
-      box-shadow: 2px 4px 10px rgba(0, 0, 0, .15);
+      box-shadow: 2px 4px 10px #61a6b4;
   }
   
   button:active, button:focus {
@@ -175,6 +204,7 @@ Main Style
   .content {
     display: flex;
     flex-wrap: wrap;
+    
   } /* movie demo code */
 
 /* --------
@@ -201,8 +231,7 @@ Main Style
 
   .column {
     position: relative;
-    width: 200px;
-    height: 520px;
+    height: 80vh;
     margin: 1rem;
     padding-bottom: calc(2em + 60px);
     background: white;
@@ -212,10 +241,9 @@ Main Style
     transition: all 0.15s linear;
   }
 
-  
 
   .column:nth-child(1) {
-    margin-left: 0px;
+    margin-left: 1rem;
   }
   .column:hover {
     border: 1px solid #7FBDD3;
@@ -228,14 +256,16 @@ Main Style
     margin: 0 0 2rem 0;
     font-size: 1.5rem;
     color: white;
+  }
 
+    
     /* -------------------------
   margin: 24px 0px 0px 24px;
     font-family: 'Lato', Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 24px;
   -------------------------- */
-  }
+
   .task {
     list-style-type: none;
     margin: 16px 0px 0px 24px;
@@ -244,9 +274,9 @@ Main Style
     background-color: white;
     border: 1px solid #EBEDF0;
     box-sizing: border-box;
-    border-radius: 2px;
+    border-radius: 10px;
     min-height: 80px;
-    width: 288px;
+    width: 80%; /*------ css tricks from https://css-tricks.com/almanac/properties/w/width/------ */
   }
   .task:nth-child(1) {
     margin-top: 32px;
@@ -288,15 +318,14 @@ Main Style
   }
   
 
-
   /* -------------------------
   Demo movie card styles
-  -------------------------- */
+  
   .taskContent {
     position: relative;
     margin: 1rem;
     padding-bottom: calc(2em + 60px);
-    background: white;
+    background: rgb(255, 255, 255);
     box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
     border-radius: 12px;
     overflow: hidden;
@@ -307,16 +336,8 @@ Main Style
     box-shadow: 2px 8px 45px rgba(0, 0, 0, .25);
   }
   
-  .column-title h3 {
-    text-align: center;
-    padding: 1.5rem 2.5rem;
-    background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
-    margin: 0 0 2rem 0;
-    font-size: 1.5rem;
-    color: white;
-  }
   
-  .taskContent p {
+  .column p {
     padding: 0 2em;
     margin: 0;
   }
@@ -347,17 +368,29 @@ Main Style
   .taskContent button:active, .card button:focus {
       outline: 0;
   }
+
+  -------------------------- */
   
+  /* ---------------------------------
+  Add responsiveness - will automatically display different number of task columns on screens 
+  ------------------------------------*/
   
+  @media screen and (max-width: 1200px) {
+    .column {
+      flex: 100%;
+    }
+
+  }
+
   @media screen and (min-width: 1200px) {
     .column {
       flex: 1 1 calc(50% - 2rem);
     }
   }
   
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1700px) {
     .column {
-      flex: 1 1 calc(33% - 2rem);
+      flex: 1 1 calc(25% - 2rem);
     }
   }
   

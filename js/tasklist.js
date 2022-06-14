@@ -6,21 +6,23 @@ const button = document.querySelector("#taskform > button")
 var tasks = document.getElementById("tasklist");
 
 // DOM elements for the task input fields
+var subjectInput = document.getElementById("subjectInput");
 var taskInput = document.getElementById("taskInput");
 var dueDateInput = document.getElementById("dueDateInput");
-var completionTimeInput = document.getElementById("completionTimeInput");
-var estimatedTimeInput = document.getElementById("estimatedTimeInput");
+// var completionTimeInput = document.getElementById("completionTimeInput");
+// var estimatedTimeInput = document.getElementById("estimatedTimeInput");
 var priorityInput = document.getElementById("priorityInput");
 
 // Form submission event listener
 form.addEventListener("submit", function(event){
   event.preventDefault();
+  let subject = subjectInput.value;
   let task = taskInput.value;
   let dueDate = dueDateInput.value;
-  let completionTime = completionTimeInput.value;
-  let estimatedTime = estimatedTimeInput.value;
+  // let completionTime = completionTimeInput.value;
+  // let estimatedTime = estimatedTimeInput.value;
   let priorityRating = priorityInput.options[priorityInput.selectedIndex].value;
-  addTask(task, dueDate, estimatedTime, priorityRating, completionTime, false);
+  addTask(subject, task, dueDate, false,false, priorityRating, false);// removed the completion time and estimated time as design project normally require longe time commitment and hard to narrow to hours and mins
   console.log(taskListArray);
 })
 
@@ -28,14 +30,14 @@ form.addEventListener("submit", function(event){
 var taskListArray = [];
 
 // Function to add task with user inputs as parameters
-function addTask(taskDescription, dueDate, estimatedTime, priorityRating, completionTime, completionStatus) {
+function addTask(subjectName, taskDescription, dueDate, completionTime, estimatedTime, priorityRating, completionStatus) {
   let d = new Date();
   let dateCreated = d.getFullYear();
   let task = {
+    subjectName,
     taskDescription,
     dueDate,
     dateCreated,
-    estimatedTime,
     completionTime,
     estimatedTime,
     priorityRating,
@@ -60,7 +62,7 @@ function renderTask(task){
 
     let taskContent = document.createElement('div');
     taskContent.classList.add('task-content');
-    taskContent.innerHTML = "<p>" + task.taskDescription +"<br>"+task.dueDate +"<br>"+ task.priorityRating + "</p>" ;
+    taskContent.innerHTML = "<p>" +task.subjectName + "<br>"+task.taskDescription +"<br>"+task.dueDate +"<br>"+ task.priorityRating + "</p>" ;
     
     let trash = document.createElement('div');
     trash.classList.add('trash');

@@ -81,7 +81,14 @@
       <!-- Internal aside container for sticky positioning -->
       <div class="aside-container">
         <form id="taskform">
-          <label for="task">Task:</label>
+
+          <!--Subject Name input -->
+          <label for="task">Subject:</label>
+          <input type="name" name="subject" id="subjectInput" required>
+          <br>
+
+          <!--Task Desription input -->
+          <label for="task">Task Description:</label>
           <input type="text" name="task" id="taskInput" required>
           <br>
 
@@ -90,14 +97,14 @@
           <input type="date" name="dueDate" id="dueDateInput">
           <br>
 
-          <!-- Time input -->
+          <!-- Time input
           <label for="completionTime">Completion Time: </label>
           <input type="time" name="completionTime" id="completionTimeInput">
           <br>
 
           <label for="estimatedTime">Estimated completion time (in mins):</label>
           <input type="number" name="estimatedTime" id="estimatedTimeInput">
-          <br>
+          <br> -->
           
           <!-- Priority -->
           <label for="priority">Task Priority:</label>
