@@ -1,17 +1,17 @@
 # StudBud
  
-Web Prototype Documentation
+Web App Prototype Documentation
 
 By Tiana Tian
 
 # Web App Concept
 
-StudBud is an online study tool that aims to help design students better manage their team/individual projects and tasks.
+StudBud is an online study tool that aims to help design students better manage their design projects and tasks.
 
 * With easy access from all devices, StudBud puts users' project work at their fingertips to take quick action and stay on track at all times
 * Providing a kanban board to manage students' study process through oroganising to-dos, monitoring WIP, coordinating tasks and workload and hitting the deadline. 
-* StudBud wish to use "Promodoro Timer" and "Stopwatch" to improve student concentration 
-* And encourage them to take proper rest in between study sessions with the embedded music player
+* StudBud wish to use "Promodoro Timer" and "Stopwatch" to improve student concentration and produtivity
+* And encourage them to take proper rest in between study sessions with the embedded music player (optional)
 * It also provides a mini documentation library to store frequented learning materials (optional)
 
 # Website Design Refinment
@@ -19,14 +19,15 @@ StudBud is an online study tool that aims to help design students better manage 
 Based on self-refection and general feedback from peers and tutor, few suggestions bebfore creating the prototype.
 
 ## Feedback:
-1. sdfsdf
-2. sdfsdf
-3. asdfadf
+1. The original web app visual style was too complicated and with all functions, tags, pop-up tags in one place makes users hard to navigate around the page.
+2. During user testing with the hifi mockup, many design students felt the mini library function was not really useful but add extra works when organising their studies. As most of them access their learning material from Canvas, online, or youtube where there are multiple entries for adding "favorite" documnents. Therefore they found the process of manually adding links, uploadin files to the StudBuD app is time consuming and less effective. 
+3. The idea of pop-up tags was exiting however, some users found it distracted when it locates within the main page and hard to notice the time changes when it sits at the bottom with smaller font size.
+4. Also the horizontal scrolling in mobile version is not inline with modern pratice - suggest to change to vertical scroll in mobile screen
 
 ## Iteration 1
 
-
-
+With a few changes, the overall look of the landing page changes in to a more __minimalistic__, __effective__ layout.
+![main page comparison](/img/1-compare-tasklist) 
 # Development Highlight
 
 ## Developing responsive website
