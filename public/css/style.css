@@ -24,6 +24,7 @@ Main Style
 
   header {
     background-color: #F6F6F6;
+    padding: 1em;
   }
   .header img {
     display: block;
