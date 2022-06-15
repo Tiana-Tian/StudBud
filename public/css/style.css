@@ -32,40 +32,7 @@ Main Style
     max-width: 100%;
   }
   
-  /* -------------------------
-  Add new task form style
-  -------------------------- */
- label {
-   font-size: 20px;
-   font-weight: 600;
- }
-  input,
-  select,
-  textarea {
-    border: 2px solid rgb(237, 237, 237);
-    background-color: white;
-    border-radius: 0.25rem;
-  }
-  
-  input,
-  select,
-  textarea {
-  font: 1rem / 1.25 sans-serif;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0.2rem 0.75rem;
-  }
-
-  input[type="text"] {
-  min-height: 8rem;
-  }
-
-  input::placeholder {
-  opacity: 1; /* Firefox */
-  color: hsl(193, 65%, 42%);
-  }
-
+ 
   /* -------------------
   GRID CSS 
   -------------------- */
@@ -115,10 +82,43 @@ Main Style
     }
   }
   
-  
+   /* -------------------------
+  Add new task form style
+  -------------------------- */
+ label {
+  font-size: 20px;
+  font-weight: 600;
+}
+ input,
+ select,
+ textarea {
+   border: 2px solid rgb(237, 237, 237);
+   background-color: white;
+   border-radius: 0.25rem;
+ }
+ 
+ input,
+ select,
+ textarea {
+ font: 1rem / 1.25 sans-serif;
+ display: block;
+ box-sizing: border-box;
+ width: 100%;
+ padding: 0.2rem 0.75rem;
+ }
+
+ input[type="text"] {
+ min-height: 8rem;
+ }
+
+ input::placeholder {
+ opacity: 1; /* Firefox */
+ color: hsl(193, 65%, 42%);
+ }
+
   
   /* ---------------
-  Other page styles: nav, button
+  Other page styles: nav
   --------------- */
   
   nav .nav-container, aside .aside-container{
@@ -188,6 +188,10 @@ Main Style
       opacity: 0.5;
   }
   
+
+   /* ---------------
+  Other page styles:  button
+  --------------- */
   button {
     width: 80%;
     display: block;
@@ -211,7 +215,7 @@ Main Style
   }
   
  /* -------------------------
-  Main content styles: column
+  Main content styles: task column
   -------------------------- */
 
   .content {
@@ -386,7 +390,7 @@ Main Style
   -------------------------- */
   
   /* ---------------------------------
-  Add responsiveness - will automatically display different number of task columns on screens 
+  Add responsiveness for tasklist- will automatically display different number of task columns on screens 
   ------------------------------------*/
   
   @media screen and (max-width: 1200px) {
@@ -410,7 +414,9 @@ Main Style
   
 
 
-
+/*---------------
+ Footer
+ --------------*/
 
   footer p {
     padding-top: 50px;
@@ -418,3 +424,7 @@ Main Style
     text-align: center;
   }
   
+
+  /*---------------
+ Stopwatch panel
+ --------------*/
