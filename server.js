@@ -4,7 +4,7 @@ const express = require('express');
 //initialise the express framework
 const app = express();
 
-// Serve static files out of the 'public' folder
+// Serve static files out of the 'dist' folder in stead of 'public'
 app.use(express.static(__dirname + '/dist'));
 
 // Serve the index.html when users access the 

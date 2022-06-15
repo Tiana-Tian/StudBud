@@ -41,8 +41,20 @@ https://stackoverflow.com/questions/2336302/single-huge-css-file-vs-multiple-sma
 Another worth mentioning point during the prototype is to add dynamic changes to button or link when users interact with their cursor. 
 
 
-## Errors after using Parcel
-Strangely after installing Parcel when I completed the tasklist page, every changes to my code afterwards did not picked up in the "dist" folder anymore, therefore when I run my page through the local server, I can not see the latest update. 
+## Errors after using Parcel - changes do not update in dist folder
+Strangely after installing Parcel when I completed the tasklist page, every changes to my code afterwards did not picked up in the "dist" folder anymore, therefore when I run my page through the local server, I can not see the latest update. After research online, I figured out that it maybe becasue of the "safe-write" functions embedded in some text editers. 
+
+And here is some possible solution discussion on github:
+https://github.com/parcel-bundler/website/issues/53
+https://github.com/parcel-bundler/parcel/issues/221
+https://github.com/parcel-bundler/parcel/pull/238
+Saving changes does not trigger watchers. Saving same file in Notepad triggers watchers
+https://developercommunity.visualstudio.com/t/saving-changes-does-not-trigger-watchers-saving-sa/209768
+
+How to disable safewrite in webpack and parcel
+https://webpack.js.org/guides/development/#choosing-a-development-tool
+https://webpack.js.org/guides/development/#adjusting-your-text-editor
+https://parceljs.org/features/development/
 
 # Reflection and Limitation
 
@@ -105,6 +117,9 @@ Learn HTML, CSS & JavaScript by coding a Stopwatch | A beginner tutorial
 https://www.youtube.com/watch?v=49f1cjZWRJA
 
 ### Pomodoro Timer coding inspiration
+
+
+https://freshman.tech/pomodoro-timer/
 
 Create Pomodoro Timer using Javascript
 https://www.youtube.com/watch?v=a7Kt7S_4HOA
