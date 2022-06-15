@@ -44,7 +44,7 @@ While building up the tasklist properties, considered the general feedback from 
 # Development Highlight
 
 ## Developing responsive website
-#### Relative links:
+It is important to have responsive screen for my web app as it means to be accessible from anywhere. Therefore I have ensure all items in the app is responsible to create a smooth navigation experience.
 
 
 ## Single CSS vs multiple CSS files
@@ -77,8 +77,7 @@ One valuable lesson learned is the necessity of ongoing ideate and iteration thr
 
 ![Iteration drafts](/readme/commits-history.jpg) 
 
-However, within the limited timeframe, I was unable to create the floating pop-up pages for both timer and music player. They have been included as seperate pages within the web app through nav tab.
-
+However, within the limited timeframe, I was unable to create the music player. And as the concept of having a mini library has been rejected after user testing, my web app is lacking function to further support their study session in depth. I will continue developing my concepts in the future with extra research.  
 
 A lof of the ideas and codes were inspired from existing project management tools and themes example and modified to fit into my proposal website app design, as in future learning, I hope I could have more original ideas. 
 
