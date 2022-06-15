@@ -19,7 +19,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
 
   <!-- Theme style  -->
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/pomodoro.css" />
 
   <!-- Favicon  -->
   <link rel="icon" href="img/favicon.png">
@@ -35,7 +35,7 @@
        </a>
     </header>
 
-    <!-- Navigation -->
+    <!-- Navigation -->  <!-- testing parcal watcher file -->
     <nav class="nav">
       <!-- Internal nav container for sticky positioning -->
       <div class="nav-container">
@@ -53,7 +53,49 @@
 
     <!-- Main content -->
     <main class="content">
-      
+      <section class="'app">
+      <progress id="js-progress" value="0"></progress>
+      <div class="progress-bar"></div>
+      <div class="timer">
+        <div class="button-group mode-buttons" id="js-mode-buttons">
+          <button
+            data-mode="pomodoro"
+            class="button active mode-button"
+            id="js-pomodoro"
+          >
+            Pomodoro
+          </button>
+          <button
+            data-mode="shortBreak"
+            class="button mode-button"
+            id="js-short-break"
+          >
+            Short break
+          </button>
+          <button
+            data-mode="longBreak"
+            class="button mode-button"
+            id="js-long-break"
+          >
+            Long break
+          </button>
+        </div>
+        <div class="clock" id="js-clock">
+          <span id="js-minutes">25</span>
+          <span class="separator">:</span>
+          <span id="js-seconds">00</span>
+        </div>
+        <button class="main-button" data-action="start" id="js-btn">
+          Start
+        </button>
+      </div>
+    </section>>
+
+  <div class="hidden">
+    <audio src="backtowork.mp3" data-sound="pomodoro"></audio>
+    <audio src="break.mp3" data-sound="shortBreak"></audio>
+    <audio src="break.mp3" data-sound="longBreak"></audio>
+  </div>
     </main>
 
     <!-- Aside -->
@@ -68,10 +110,9 @@
   </div>
 
 
-
   
   
-  <script src="js/tasklist.js"></script>
+  <script src="js/pomodoro.js"></script>
 </body>
 
 </html>
