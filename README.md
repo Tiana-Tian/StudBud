@@ -10,24 +10,37 @@ StudBud is an online study tool that aims to help design students better manage 
 
 * With easy access from all devices, StudBud puts users' project work at their fingertips to take quick action and stay on track at all times
 * Providing a kanban board to manage students' study process through oroganising to-dos, monitoring WIP, coordinating tasks and workload and hitting the deadline. 
-* StudBud wish to use "Promodoro Timer" and "Stopwatch" to improve student concentration and produtivity
+* StudBud wish to use "Promodoro Timer" and "Stopwatch" to improve student concentration and productivity
 * And encourage them to take proper rest in between study sessions with the embedded music player (optional)
 * It also provides a mini documentation library to store frequented learning materials (optional)
 
-# Website Design Refinment
+# Website Design Refinement
 
 Based on self-refection and general feedback from peers and tutor, few suggestions bebfore creating the prototype.
 
 ## Feedback:
 1. The original web app visual style was too complicated and with all functions, tags, pop-up tags in one place makes users hard to navigate around the page.
-2. During user testing with the hifi mockup, many design students felt the mini library function was not really useful but add extra works when organising their studies. As most of them access their learning material from Canvas, online, or youtube where there are multiple entries for adding "favorite" documnents. Therefore they found the process of manually adding links, uploadin files to the StudBuD app is time consuming and less effective. 
-3. The idea of pop-up tags was exiting however, some users found it distracted when it locates within the main page and hard to notice the time changes when it sits at the bottom with smaller font size.
-4. Also the horizontal scrolling in mobile version is not inline with modern pratice - suggest to change to vertical scroll in mobile screen
+2. During user testing with the hifi mockup, many design students felt the mini library function was not really useful but add extra works when organising their studies. As most of them access their learning material from Canvas, online, or youtube where there are multiple entries for adding "favorite" documents. Therefore they found the process of manually adding links, uploading files to the StudBuD app is time consuming and less effective. 
+3. The idea of pop-up tags was exciting however, some users found it distracted when it is located within the main page and hard to notice the time changes when it sits at the bottom with smaller font size.
+4. Also the horizontal scrolling in mobile version is not inline with modern practice - suggest to change to vertical scroll in mobile screen
 
 ## Iteration 1
 
 With a few changes, the overall look of the landing page changes in to a more __minimalistic__, __effective__ layout.
-![main page comparison](/img/1-compare-tasklist) 
+![Main page comparison](public/img/1-compare-tasklist.jpeg) 
+
+* The __nav bar__ has been changed from horizontal at the top to vertial on the left side
+* __Simplify__ the __process of adding new task__ by creating a permanent new task form section on the right side
+* Choose a __darker background colour__ to enhance the contrast of contents overall and make the kanban board contents more obvious
+
+
+## Iteration 2
+While building up the tasklist properties, considered the general feedback from potential design student users, I removed the "Start date" and "Assignee" from the form.
+![Add task form comparison](public/img/2-compare-addtask.jpeg) 
+
+* design projects often take longer time to complete and it is difficult to make a clear "start date" for them, a clear reminer of due date will be sufficient for design student for now, it is the ability of tracking WIP that the kanban board provided that matters to design students and most. 
+* Sharing their to-do list and WIP with other teammates create extra pressures for some design students and they prefer to work in their own pace, therfore they hope to keep this web app for individual use only
+
 # Development Highlight
 
 ## Developing responsive website
@@ -46,9 +59,10 @@ Another worth mentioning point during the prototype is to add dynamic changes to
 Strangely after installing Parcel when I completed the tasklist page, every changes to my code afterwards did not picked up in the "dist" folder anymore, therefore when I run my page through the local server, I can not see the latest update. After research online, I figured out that it maybe becasue of the "safe-write" functions embedded in some text editers. 
 
 And here is some possible solution discussion on github:
-https://github.com/parcel-bundler/website/issues/53
-https://github.com/parcel-bundler/parcel/issues/221
-https://github.com/parcel-bundler/parcel/pull/238
+* https://github.com/parcel-bundler/website/issues/53
+* https://github.com/parcel-bundler/parcel/issues/221
+* https://github.com/parcel-bundler/parcel/pull/238
+
 Saving changes does not trigger watchers. Saving same file in Notepad triggers watchers
 https://developercommunity.visualstudio.com/t/saving-changes-does-not-trigger-watchers-saving-sa/209768
 
@@ -61,7 +75,7 @@ https://parceljs.org/features/development/
 
 One valuable lesson learned is the necessity of ongoing ideate and iteration throughout the entire design process. Everytime I make a loop back to "ideation" again, my idea gets more concrete. And more importanty to consistantly commit any modular changes to my code so I could have a clear track of the developments and progress overall.
 
-![Iteration drafts](/readme/commits-history.jpeg) 
+![Iteration drafts](/readme/commits-history.jpg) 
 
 However, within the limited timeframe, I was unable to create the floating pop-up pages for both timer and music player. They have been included as seperate pages within the web app through nav tab.
 
