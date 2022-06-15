@@ -41,6 +41,9 @@ https://stackoverflow.com/questions/2336302/single-huge-css-file-vs-multiple-sma
 Another worth mentioning point during the prototype is to add dynamic changes to button or link when users interact with their cursor. 
 
 
+## Errors after using Parcel
+Strangely after installing Parcel when I completed the tasklist page, every changes to my code afterwards did not picked up in the "dist" folder anymore, therefore when I run my page through the local server, I can not see the latest update. 
+
 # Reflection and Limitation
 
 One valuable lesson learned is the necessity of ongoing ideate and iteration throughout the entire design process. Everytime I make a loop back to "ideation" again, my idea gets more concrete. And more importanty to consistantly commit any modular changes to my code so I could have a clear track of the developments and progress overall.

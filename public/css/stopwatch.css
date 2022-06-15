@@ -168,21 +168,19 @@ Main Style
  --------------*/
 
  :root {
-	--primary: #DC143C;
+	--primary: #cf544b;
+    --secondary: #069CB9;
+    --third:#e19e3a;
 	--dark: #1F2937;
-	--darkdark: #111827;
+	--darkdark: #213257;
 	--light: #F3F4F6;
 }
 
-* {
-	margin: 0;
-	box-sizing: border-box;
-	font-family: 'Fira sans', sans-serif;
-}
 
-body {
-	background-color: var(--dark);
-	color: var(--light);
+
+.content {
+    font-family: 'Fira sans', sans-serif;
+    color: var(--light);
 }
 
 .watch {
@@ -231,4 +229,12 @@ body {
 
 .controls button:active {
 	background-color: var(--dark);
+}
+
+#start {
+    background-color: var(--secondary);
+}
+
+#reset {
+    background-color: var(--third);
 }
