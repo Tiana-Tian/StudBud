@@ -1,9 +1,11 @@
 # StudBud
  
-Web App Prototype Documentation
+## Web App Prototype Documentation
 
 By Tiana Tian
-* note that there has been an issue with VS code that as the safe writing featuers, while running the watcher program, saving files in Visual Studio does not trigger the watcher to rebuild assets. Therefore before I submitted the assessment, the issue has not been fixed and the dist folder has only picked up changes in the previous week and does not inlcude functional stopwatch and pomodoro timer page, please kindly use local html file to review. 
+
+* 16/6 Update - I have finally resolved the issue of rebuild assets in dist folder, and commit this change only to my repository today on 16/06 so that my web app can be run on the localhost. However if it will result in one day penalty, please kindly discard my updates today. Thank you! 
+* Note that there has been an issue with VS code that as the safe writing featuers, while running the watcher program, saving files in Visual Studio does not trigger the watcher to rebuild assets. Therefore before I submitted the assessment on 15/06, the issue has not been fixed and the dist folder has only picked up changes in the previous week and does not inlcude functional stopwatch and pomodoro timer page, please kindly use local html file to review. 
 
 # Web App Concept
 
@@ -107,6 +109,8 @@ How to disable safewrite in webpack and parcel
 https://webpack.js.org/guides/development/#choosing-a-development-tool
 https://webpack.js.org/guides/development/#adjusting-your-text-editor
 https://parceljs.org/features/development/
+
+After several rounds of troubleshooting, I figured out that it is because of some file within my html were missing path to the public folder which caused the parcel watcher program did not run properly, and after resolving that, the web app runs on the localhost server smoothly.
 
 # Reflection and Limitation
 
